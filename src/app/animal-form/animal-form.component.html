@@ -1,0 +1,149 @@
+<div class="form-container">
+  <form [formGroup]="animalForm" class="animal-form" (ngSubmit)="onSubmit()">
+    <div class="spca-information">
+      
+      <img mat-card-image src="../../assets/mobile_spca_logo.png" alt="logo" class="spca-logo">
+
+      <div class="spca-information-text">
+          <!--
+          <mat-label>Mobile SPCA</mat-label>
+          -->
+          <div class="header-label">Mobile SPCA</div>
+          <span>620 Zeigler Circle W - Mobile, AL 36608</span>
+          <span>251-633-3531 - spca@MobileSPCA.org</span>
+          <span>MobileSPCA.org</span>
+      </div>
+
+      <mat-card class="record-information">
+          <mat-form-field class="full-width">
+              <input matInput placeholder="Date" formControlName="recordInformationDateIn">
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Shelter number" value="2191D" formControlName="recordInformationShelterNumber">
+          </mat-form-field>
+
+          <div class="intake-type-container">
+            <mat-label>Intake type:</mat-label>
+            <mat-checkbox formControlName="recordInformationIntakeTypeOS">OS</mat-checkbox>
+            <mat-checkbox formControlName="recordInformationIntakeTypeT">T</mat-checkbox>
+            <mat-checkbox formControlName="recordInformationIntakeTypeS">S</mat-checkbox>
+          </div>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Health certificate date" formControlName="recordInformationHealthCertDate">
+          </mat-form-field>
+      </mat-card>
+    </div>
+    
+    <mat-card class="pet-information">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Name" formControlName="petInformationName">
+      </mat-form-field>
+
+      <table class="full-width">
+          <tr class="full-width">
+              <td style="width:32%;">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="DOB" formControlName="petInformationDOB">
+                </mat-form-field>
+              </td>
+              <td style="width:32%;">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="Age on transport" formControlName="petInformationAgeOnTransport">
+                </mat-form-field>
+              </td>
+              <td style="width:32%;">
+                <div class="gender-information-container">
+                  <mat-radio-group formControlName="petInformationGender">
+                    <mat-radio-button class="gender-radio" value="M">M</mat-radio-button>
+                    <mat-radio-button class="gender-radio" value="MN">MN</mat-radio-button>
+                    <mat-radio-button class="gender-radio" value="F">F</mat-radio-button>
+                    <mat-radio-button class="gender-radio" value="FS">FS</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </td>
+            </tr>        
+      </table>
+
+      <table class="full-width">
+          <tr class="full-width">
+              <td style="width:69%">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Breed" formControlName="petInformationBreed">
+                </mat-form-field>
+                
+              </td>
+              <td style="width:29%">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Rabies tag" formControlName="petInformationRabiesTag">
+                </mat-form-field>
+                
+              </td>
+          </tr>        
+      </table>
+
+      <table class="full-width">
+          <tr class="full-width">
+              <td style="width:24%">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Date" formControlName="petInformationDate">
+                </mat-form-field>
+                
+              </td>
+              <td style="width:24%">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Weight" formControlName="petInformationWeight">
+                </mat-form-field>
+                
+              </td>
+              <td style="width:24%">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Date2" formControlName="petInformationDate2">
+                </mat-form-field>
+                
+              </td>
+              <td style="width:24%">
+                <mat-form-field >
+                    <input matInput placeholder="Weight2" formControlName="petInformationWeight2">
+                </mat-form-field>
+                
+              </td>
+            </tr>
+      </table>
+
+      <table class="full-width">
+        
+
+        <tr class="full-width">
+          <td class="full-width">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Color" formControlName="petInformationColor">
+            </mat-form-field>
+            
+          </td>
+        </tr>
+
+      </table>
+      <table>
+          <tr class="full-width">
+              <td style="width:50%;">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="MSPCA Assessment Date" formControlName="petInformationAssessmentDate">
+                </mat-form-field>
+              </td>
+            </tr>
+      </table>
+
+    </mat-card>
+
+    <mat-card class="vaccination-records">
+      <div class="header-label">Vaccination Records</div>
+
+      <mat-form-field style="width:70%; float:left;">
+        <input matInput>
+      </mat-form-field>
+      <mat-checkbox style="font-size: 1.5em;">Bordetella</mat-checkbox>
+      
+    </mat-card>
+
+  </form>
+</div>
